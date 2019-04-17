@@ -1,4 +1,4 @@
-# BlackJack Hall of Fame - Website
+# BlackJack Hall of Fame - AWS SAM Template for the Simulation
 
 ## Build Instructions
 
