@@ -1,6 +1,7 @@
 import json
 from simulator.utility import logger
 from simulator.game.houserules import HouseRules
+from simulator.game.game import Game
 
 LOG = logger.get_logger(__name__)
 house_rules = HouseRules()
@@ -10,6 +11,8 @@ def start_sim(event, context):
     house_rules.load(event['house_rules'])
     for i in range(0, event['iterations']):
         LOG.debug(f"Execution {i}")
+        game = Game(house_rules)
+        game.play()
 
 
 
